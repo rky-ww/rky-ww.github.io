@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: javalgo@outlook.com
 description: "Every failure is leading towards success."
 keyword: "rky, rky Blog, rky的博客, Study Boy"
-url: "http://rky.github.io"
+url: "https://rky-ww.github.io"
 baseurl: ""
-github_repo: "https://github.com/rky/rky.github.io.git"
+github_repo: "https://github.com/rky-ww/rky-ww.github.io"
 
 # Sidebar settings
 sidebar: true
@@ -33,17 +33,6 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM
-
-# 评论系统
-# Gitalk
-gitalk:
-  enable: true
-  clientID: Ov23liE5acY962nbKVnY
-  clientSecret: a246c9d3011f3aaab9669e95c82bb9a1d24730e9
-  repo: rky-ww.github.io
-  owner: rky-ww
-  admin: rky-ww
-  distractionFreeMode: true
 
 # 统计
 # Analytics settings

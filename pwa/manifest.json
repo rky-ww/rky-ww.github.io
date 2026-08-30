@@ -1,6 +1,6 @@
 {
-  "name": "BY Blog",
-  "short_name": "BY Blog",
+  "name": "rky Blog",
+  "short_name": "rky Blog",
   "description": "A personal blog by engineer",
   "icons": [{
     "src": "icons/pwa_icon_128.png",
@@ -11,8 +11,8 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#fff",
-  "theme_color": "#000",
+  "background_color": "#f2f0e9",
+  "theme_color": "#171816",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

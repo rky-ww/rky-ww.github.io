@@ -4,7 +4,7 @@ description: "No failure, No man!"
 ---
 
 {% for post in paginator.posts %}
-<div class="post-preview">
+<div class="post-preview" data-index="{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
             {{ post.title }}
