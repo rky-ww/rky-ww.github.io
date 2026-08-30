@@ -213,6 +213,14 @@ a:focus:not(:focus-visible) {
   color: var(--accent-dark);
 }
 
+.page-home .post-preview > a:focus {
+  outline: none;
+}
+
+.page-home .post-preview > a:focus-visible {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
 .page-home .post-preview > a:hover::after,
 .page-home .post-preview > a:focus::after {
   transform: translateX(5px);
@@ -469,6 +477,14 @@ body:not(.page-home) .intro-header .post-heading .subheading {
   background: transparent;
 }
 
+.page-post .pager li > a:focus {
+  outline: none;
+}
+
+.page-post .pager li > a:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
+}
+
 .page-tags #tag-heading {
   padding: 128px 0 58px;
 }
@@ -549,6 +565,14 @@ body:not(.page-home) .intro-header .post-heading .subheading {
 .page-tags .one-tag-list .post-preview > a:hover .post-title,
 .page-tags .one-tag-list .post-preview > a:focus .post-title {
   color: var(--accent-dark);
+}
+
+.page-tags .one-tag-list .post-preview > a:focus {
+  outline: none;
+}
+
+.page-tags .one-tag-list .post-preview > a:focus-visible {
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .page-tags .one-tag-list .post-title {
