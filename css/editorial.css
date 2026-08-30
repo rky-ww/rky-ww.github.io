@@ -35,8 +35,12 @@ a:focus {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline: 2px solid rgba(155, 61, 48, 0.5);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 ::selection {
@@ -498,10 +502,16 @@ body:not(.page-home) .intro-header .post-heading .subheading {
 }
 
 .page-tags #tag_cloud a:hover,
-.page-tags #tag_cloud a:focus {
+.page-tags #tag_cloud a:focus,
+.page-tags #tag_cloud a:active {
   color: var(--paper) !important;
   background: var(--accent) !important;
   border-color: var(--accent);
+  outline: none;
+}
+
+.page-tags #tag_cloud a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(155, 61, 48, 0.25);
 }
 
 .page-tags #tag_cloud a:hover::after,
@@ -572,10 +582,26 @@ body:not(.page-home) .intro-header .post-heading .subheading {
 }
 
 .sidebar-container .tags a:hover,
-.sidebar-container .tags a:focus {
+.sidebar-container .tags a:focus,
+.sidebar-container .tags a:active {
   color: var(--paper) !important;
   background: var(--accent);
   border-color: var(--accent) !important;
+  outline: none;
+}
+
+.sidebar-container .tags a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(155, 61, 48, 0.25);
+}
+
+.intro-header .tags a:focus,
+.intro-header .tags .tag:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.intro-header .tags a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(242, 240, 233, 0.35);
 }
 
 .page-about .postlist-container {
