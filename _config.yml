@@ -45,7 +45,7 @@ ba_track_id: 8c6485a05301de4a4d7b307903a51619
 
 # Featured Tags
 featured-tags: true
-featured-condition-size: 1
+featured-condition-size: 0
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"

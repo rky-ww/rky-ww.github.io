@@ -72,10 +72,12 @@ button:focus-visible {
 .navbar-custom .navbar-brand::before {
   content: "";
   display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin: 0 10px 1px 0;
-  background: var(--accent);
+  width: 26px;
+  height: 26px;
+  margin: 0 10px 3px 0;
+  background: var(--ink) url("../img/rky.jpg") center/cover no-repeat;
+  border: 1px solid rgba(242, 240, 233, 0.35);
+  vertical-align: middle;
 }
 
 .navbar-custom .nav li a {
@@ -440,6 +442,24 @@ body:not(.page-home) .intro-header .post-heading .subheading {
   border-top: 1px solid var(--rule);
 }
 
+.page-post .sidebar-container:not(.catalog-container) h5,
+.page-post .sidebar-container:not(.catalog-container) h5 a {
+  color: var(--ink) !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.page-post .sidebar-container:not(.catalog-container) a {
+  color: var(--accent-dark) !important;
+}
+
+.page-post .sidebar-container:not(.catalog-container) hr {
+  margin: 28px 0 22px;
+  border-top: 1px solid var(--rule);
+}
+
 .page-post .pager li > a {
   border: 1px solid var(--ink);
   background: transparent;
@@ -457,51 +477,105 @@ body:not(.page-home) .intro-header .post-heading .subheading {
 
 .page-tags #tag_cloud a,
 .page-tags #tag_cloud .tag {
-  margin: 0 6px 8px 0;
-  padding: 4px 12px;
-  color: var(--ink);
-  background: transparent;
+  margin: 0 8px 10px 0;
+  padding: 5px 14px;
+  color: var(--ink) !important;
+  background: transparent !important;
   border: 1px solid var(--rule);
   border-radius: 0;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 11px !important;
-  letter-spacing: 0.08em;
+  font-size: 12px !important;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+.page-tags #tag_cloud a::after {
+  content: " " attr(rel);
+  margin-left: 8px;
+  color: var(--muted);
+  font-size: 10px;
 }
 
 .page-tags #tag_cloud a:hover,
 .page-tags #tag_cloud a:focus {
-  color: var(--paper);
+  color: var(--paper) !important;
   background: var(--accent) !important;
   border-color: var(--accent);
 }
 
+.page-tags #tag_cloud a:hover::after,
+.page-tags #tag_cloud a:focus::after {
+  color: rgba(242, 240, 233, 0.75);
+}
+
 .page-tags .one-tag-list {
-  margin-bottom: 64px;
+  margin-bottom: 56px;
 }
 
 .page-tags .listing-seperator {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
+  padding-bottom: 10px;
   color: var(--accent);
+  border-bottom: 2px solid var(--ink);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
+.page-tags .listing-seperator::before {
+  content: "#";
+  margin-right: 6px;
+}
+
 .page-tags .one-tag-list .post-preview {
-  padding: 18px 0;
-  border-top: 1px solid var(--rule);
+  padding: 14px 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-tags .one-tag-list .post-preview > a:hover .post-title,
+.page-tags .one-tag-list .post-preview > a:focus .post-title {
+  color: var(--accent-dark);
 }
 
 .page-tags .one-tag-list .post-title {
   margin: 0;
   font-family: Georgia, "Songti SC", "STSong", serif;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
+  line-height: 1.4;
+}
+
+.page-tags .one-tag-list .post-subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .page-tags .one-tag-list hr {
   display: none;
+}
+
+.sidebar-container .tags a {
+  padding: 3px 12px;
+  color: var(--ink-soft) !important;
+  background: transparent;
+  border: 1px solid var(--rule) !important;
+  border-radius: 0;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.sidebar-container .tags a:hover,
+.sidebar-container .tags a:focus {
+  color: var(--paper) !important;
+  background: var(--accent);
+  border-color: var(--accent) !important;
 }
 
 .page-about .postlist-container {
@@ -512,7 +586,54 @@ body:not(.page-home) .intro-header .post-heading .subheading {
 }
 
 .page-about .sidebar-container {
-  display: none;
+  float: none;
+  width: min(100%, var(--reading-width));
+  margin: 56px auto 0;
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+.page-about .sidebar-container h5 {
+  color: var(--ink) !important;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.page-about .sidebar-container h5 a {
+  color: var(--ink) !important;
+}
+
+.page-about .sidebar-container a {
+  color: var(--accent-dark) !important;
+}
+
+.page-about .sidebar-container hr {
+  margin: 32px 0 24px;
+  border-top: 1px solid var(--rule);
+}
+
+.page-about .short-about {
+  overflow: hidden;
+}
+
+.page-about .short-about > a {
+  float: left;
+  margin: 0 24px 10px 0;
+}
+
+.page-about .short-about img {
+  width: 148px;
+  margin: 0;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+}
+
+.page-about .short-about p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .page-about .post-container {
@@ -641,6 +762,16 @@ footer .copyright a:focus {
 
   .page-about .post-container blockquote {
     font-size: 20px;
+  }
+
+  .page-about .short-about img {
+    width: 128px;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-about .sidebar-container section.visible-md.visible-lg {
+    display: block !important;
   }
 }
 
